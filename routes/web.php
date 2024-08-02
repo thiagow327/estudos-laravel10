@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\SupportController;
 use App\Http\Controllers\Site\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,6 @@ Route::get('/', function () {
 
 // get view in controller
 Route::get('/contact', [SiteController::class, 'contact']);
+
+// use name for reference
+Route::get('/supports', [SupportController::class, 'index'])->name('supports.index');
